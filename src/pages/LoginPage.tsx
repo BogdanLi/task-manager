@@ -33,6 +33,8 @@ const LoginPage = () => {
         sessionStorage.setItem("token", response.accessToken);
       }
 
+      localStorage.setItem("user", JSON.stringify(response.user));
+
       navigate("/");
     } catch (error) {
       console.error(error);
